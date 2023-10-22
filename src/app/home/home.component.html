@@ -1,14 +1,12 @@
 <app-header></app-header>
 <main>
-    <div class="container">
-        <a routerLink="/descripcion/{{producto.id}}" *ngFor="let producto of productos">
-          <mat-card>
-            <img class="img-card" mat-card-image src={{producto.imagenUrl}} alt="">
-            <mat-card-content class="text-white">
-              <p>U$S {{producto.precio}}</p>
-              <p>{{producto.tipoEnvio}}</p>
-            </mat-card-content>
-          </mat-card>
-        </a>
-    </div>
+  <div class="container">
+    <mat-card routerLink="/descripcion/{{producto.id}}" *ngFor="let producto of productos" style="cursor:pointer;">
+        <img class="img-card" mat-card-image src={{producto.imagenUrl}} alt="">
+        <mat-card-content class="text-white">
+          <p>U$S {{producto.precio}}</p>
+          <p>{{producto.tipoEnvio}}</p>
+        </mat-card-content>
+    </mat-card>
+  </div>
 </main>
